@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  node-app:
+    image: node:latest
+    container_name: node-container
+    working_dir: /usr/src/app
+    volumes:
+      - .:/usr/src/app   # Mount current folder to container
+    command: ["node", "-v"] # Just prints Node version (replace with your app's start cmd)
+    tty: true
